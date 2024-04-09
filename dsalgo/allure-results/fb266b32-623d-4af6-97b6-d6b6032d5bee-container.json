@@ -1,0 +1,1 @@
+{"uuid":"fb266b32-623d-4af6-97b6-d6b6032d5bee","name":"FirefoxTest","children":[],"befores":[{"name":"defineBrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1712677218237,"stop":1712677218241}],"afters":[],"start":1712677218219,"stop":1712677304045}

@@ -1,0 +1,3616 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 9, 2024 10:40:18 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 9, 2024 10:40:18 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 9, 2024 10:41:40 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>10</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>10</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>60</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>400</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Array in Homepage":29.176,"Data Structures in Homepage":13.572,"Graph in Homepage":18.695,"GetStartedPage testing":9.325,"Linked List in Homepage":28.79,"Login Functionality Testing":38.09,"Queue in Homepage":24.622,"Registration Page":17.31,"Stack in Homepage":16.924,"Tree in Homepage":21.211
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@TC_AR_04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_Q_05</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_09</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_GR_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_08</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Getstartedpagetest</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_GS_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_ST_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_12</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_05</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_11</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LP_01</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_ST_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_02</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_10</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_Q_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_Q_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_06</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_ST_04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_GR_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_07</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_GS_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_06</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_05</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_ST_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Loginfeature</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_07</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_09</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_AR_08</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_DS_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_DS_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_07</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_Q_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_06</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_Q_04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_05</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LP_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_GR_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_LL_08</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_TR_04</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 10,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 60,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 400,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@TC_AR_04</a><a class="dropdown-item" href="#">@TC_Q_05</a><a class="dropdown-item" href="#">@TC_AR_09</a><a class="dropdown-item" href="#">@TC_GR_03</a><a class="dropdown-item" href="#">@TC_AR_03</a><a class="dropdown-item" href="#">@TC_TR_08</a><a class="dropdown-item" href="#">@Getstartedpagetest</a><a class="dropdown-item" href="#">@TC_GS_02</a><a class="dropdown-item" href="#">@TC_ST_02</a><a class="dropdown-item" href="#">@TC_TR_12</a><a class="dropdown-item" href="#">@TC_LL_05</a><a class="dropdown-item" href="#">@TC_LL_01</a><a class="dropdown-item" href="#">@TC_TR_11</a><a class="dropdown-item" href="#">@TC_LP_01</a><a class="dropdown-item" href="#">@TC_ST_03</a><a class="dropdown-item" href="#">@TC_AR_02</a><a class="dropdown-item" href="#">@TC_TR_10</a><a class="dropdown-item" href="#">@TC_Q_01</a><a class="dropdown-item" href="#">@TC_Q_03</a><a class="dropdown-item" href="#">@TC_AR_06</a><a class="dropdown-item" href="#">@TC_ST_04</a><a class="dropdown-item" href="#">@TC_TR_03</a><a class="dropdown-item" href="#">@TC_GR_01</a><a class="dropdown-item" href="#">@TC_LL_02</a><a class="dropdown-item" href="#">@TC_AR_01</a><a class="dropdown-item" href="#">@TC_LL_07</a><a class="dropdown-item" href="#">@TC_GS_01</a><a class="dropdown-item" href="#">@TC_LL_04</a><a class="dropdown-item" href="#">@TC_LL_06</a><a class="dropdown-item" href="#">@TC_AR_05</a><a class="dropdown-item" href="#">@TC_ST_01</a><a class="dropdown-item" href="#">@Loginfeature</a><a class="dropdown-item" href="#">@TC_AR_07</a><a class="dropdown-item" href="#">@TC_TR_09</a><a class="dropdown-item" href="#">@TC_AR_08</a><a class="dropdown-item" href="#">@TC_LL_03</a><a class="dropdown-item" href="#">@TC_DS_01</a><a class="dropdown-item" href="#">@TC_DS_02</a><a class="dropdown-item" href="#">@TC_TR_07</a><a class="dropdown-item" href="#">@TC_Q_02</a><a class="dropdown-item" href="#">@TC_TR_01</a><a class="dropdown-item" href="#">@TC_TR_06</a><a class="dropdown-item" href="#">@TC_Q_04</a><a class="dropdown-item" href="#">@TC_TR_02</a><a class="dropdown-item" href="#">@TC_TR_05</a><a class="dropdown-item" href="#">@TC_LP_02</a><a class="dropdown-item" href="#">@TC_GR_02</a><a class="dropdown-item" href="#">@TC_LL_08</a><a class="dropdown-item" href="#">@TC_TR_04</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Array in Homepage</p>
+            <p class="text-sm">
+              <span>10:40:19 AM</span> / <span>00:00:29:176</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Array in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:40:19 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:40:48 AM</span>
+<span class='badge badge-default'>00:00:29:176</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Search the array</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_search_the_array_button()">
+                <span>When : The user clicks on Search the array button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_and_submit_button_to_test()">
+                <span>Then : The user should be redirected to a page having an tryEditor with a Run and Submit button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Find the numbers with even number of digits</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_click_on_the_link_of_find_numbers_with_even_number_of_digits()">
+                <span>When : The user click on the link of Find numbers with even number of digits</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_and_submit_button_to_test()">
+                <span>Then : The user should be redirected to a page having an tryEditor with a Run and Submit button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Max consecutive ones</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_max_consecutive_ones()">
+                <span>When : The user clicks on Max consecutive ones</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_and_submit_button_to_test()">
+                <span>Then : The user should be redirected to a page having an tryEditor with a Run and Submit button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Applications of Array</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_applications_of_array_button()">
+                <span>When : The user clicks Applications of Array button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_page(java.lang.String)">
+                <span>Then : The user should be redirected to "Applications of Array" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_try_here_button_in_applications_of_array()">
+                <span>When : The user clicks on try here Button in Applications of Array</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : The user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Basic Operations in List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_the_button(java.lang.String)">
+                <span>When : The user clicks the "Basic Operations in List" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_page(java.lang.String)">
+                <span>Then : The user should be redirected to "Basic Operations in List" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_button_in_basic_operations_in_list_page(java.lang.String)">
+                <span>When : The user clicks "Try Here" button in Basic Operations in List page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : The user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Arrays</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_get_started_button_of_arrays()">
+                <span>When : The user clicks on Get Started button of Arrays</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_navigated_to_the_page(java.lang.String)">
+                <span>Then : The user should be navigated to  the "Array" page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Arrays in Python</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_button1(java.lang.String)">
+                <span>When : The user clicks "Arrays in Python" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_page(java.lang.String)">
+                <span>Then : The user should be redirected to "Arrays in Python" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_button_in_arrays_in_python_page(java.lang.String)">
+                <span>When : The user clicks "Try Here" button in Arrays in Python page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : The user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Arrays using List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_button(java.lang.String)">
+                <span>When : The user clicks "Arrays using List" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_page(java.lang.String)">
+                <span>Then : The user should be redirected to "Arrays using List" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_button_in_arrays_using_list_page(java.lang.String)">
+                <span>When : The user clicks "Try Here" button in Arrays using List page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : The user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Squares of sorted array</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_squares_of_sorted_array()">
+                <span>When : The user clicks on Squares of sorted array</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_and_submit_button_to_test()">
+                <span>Then : The user should be redirected to a page having an tryEditor with a Run and Submit button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Practice Questions</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_the_button2(java.lang.String)">
+                <span>When : The user clicks on the "Practice Questions" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_redirected_to_a_page_having_python_programs()">
+                <span>Then : The user is redirected to a page having python programs</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="112"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Data Structures in Homepage</p>
+            <p class="text-sm">
+              <span>10:40:38 AM</span> / <span>00:00:13:572</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Data Structures in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:40:38 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:40:52 AM</span>
+<span class='badge badge-default'>00:00:13:572</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=112</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="113"><span class="badge log pass-bg mr-2">Pass</span>Data Structures</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_clicks_on_get_started_button_of_data_structures()">
+                <span>When : The user clicks on Get Started button of Data structures</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_should_be_navigated_to_page(java.lang.String)">
+                <span>Then : The user should be navigated to "Data Structures-Introduction" page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="116"><span class="badge log pass-bg mr-2">Pass</span>Time complexity</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_is_on_data_structure_introduction_page()">
+                <span>Given : The user is on Data Structure Introduction page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_clicks_on_time_complexity()">
+                <span>When : The user clicks on Time Complexity</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_should_be_redirected_to_of_data_structures_introduction(java.lang.String)">
+                <span>Then : The user should be redirected to "Time complexity" of Data structures-Introduction</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_clicks_on_button(java.lang.String)">
+                <span>When : The user clicks on "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : The user should be redirected to a page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.DataStructuresteps.the_user_enter_the_python_code_and_click_run()">
+                <span>And : The user enter the python code and click Run</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="119"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Graph in Homepage</p>
+            <p class="text-sm">
+              <span>10:40:39 AM</span> / <span>00:00:18:695</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Graph in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:40:39 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:40:58 AM</span>
+<span class='badge badge-default'>00:00:18:695</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=119</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="120"><span class="badge log pass-bg mr-2">Pass</span>click on Get Started</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_clicks_on_get_started_button_of_graph()">
+                <span>When : The user clicks on Get Started button of Graph</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_should_be_navigated_to_the_graph_page()">
+                <span>Then : The user should be navigated to the Graph page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>CLick on Graph</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_clicks_on_graph()">
+                <span>When : The user clicks on Graph</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_should_be_directed_to_the_of_graph_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Graph" of Graph Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_clicks_on_button(java.lang.String)">
+                <span>And : The user clicks on "Try here" button..</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having an TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>click on Graph Representations</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_clicks_on_graph_representations()">
+                <span>When : The user clicks on Graph Representations</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_should_be_directed_to_the_of_graph_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Graph Representations" of Graph Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.the_user_clicks_on_button(java.lang.String)">
+                <span>And : The user clicks on "Try here" button..</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Graphsteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having an TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="144"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">GetStartedPage testing</p>
+            <p class="text-sm">
+              <span>10:40:42 AM</span> / <span>00:00:09:325</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">GetStartedPage testing</h5>
+<span class='badge badge-success'>04.09.2024 10:40:42 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:40:52 AM</span>
+<span class='badge badge-default'>00:00:09:325</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=144</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="145"><span class="badge log pass-bg mr-2">Pass</span>User enters DS Algo Portal</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_be_able_to_open_the_browser()">
+                <span>Given : The user should be able to open the browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_enters_the_ds_algo_portal_url()">
+                <span>When : The user enters the DS_Algo Portal  <URL></span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(java.lang.String)">
+                <span>Then : The user should be landed on the DS_Algo Get Started page with message "You are at the right place"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_clicks_the_get_started_button()">
+                <span>When : The user clicks the Get started button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_land_in_data_structure_introduction_page_with_and_links(java.lang.String,java.lang.String)">
+                <span>Then : The user should land in Data Structure Introduction Page with "Register" and "Sign in" links</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_clicks_the_data_structure_dropdown_arrow()">
+                <span>When : The user clicks the data structure"dropdown  arrow"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_able_to_see_options_arrays_in_drop_down_section(java.lang.Integer,io.cucumber.datatable.DataTable)">
+                <span>Then : The user should able to see 6 options Arrays in drop down section</span>
+      <div><table class='markup-table table '><tr><td>Arrays</td></tr><tr><td>Linked List</td></tr><tr><td>Stack</td></tr><tr><td>Queue</td></tr><tr><td>Tree</td></tr><tr><td>Graph</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="156"><span class="badge log pass-bg mr-2">Pass</span>User clicks Register button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_be_able_to_open_the_browser()">
+                <span>Given : The user should be able to open the browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_enters_the_ds_algo_portal_url()">
+                <span>When : The user enters the DS_Algo Portal  <URL></span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_selects_any_data_structures_item_from_the_drop_down_without_sign_in()">
+                <span>When : The user selects any data structures item from the drop down without Sign in.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_able_to_see_an_warning_message(java.lang.String)">
+                <span>Then : The user should able to see an warning message "You are not logged in"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_clicks_any_get_started_buttons_of_data_structures_on_the_ds_introduction_page()">
+                <span>When : The user clicks any Get Started buttons of data structures  on the DS Introduction page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_able_to_see_the_warning_message(java.lang.String)">
+                <span>Then : The user should able to see the warning message "You are not logged in"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_clicks_register_link_on_the_ds_introduction_page()">
+                <span>When : The user clicks Register link on the DS Introduction page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_be_redirected_to_register_form()">
+                <span>Then : The user should be redirected to Register form</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.HomePageSteps.the_user_should_able_see_message_at_the_bottom_of_the_page(java.lang.String)">
+                <span>And : The user should able see message "Login" at the bottom of the page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="160"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Linked List in Homepage</p>
+            <p class="text-sm">
+              <span>10:40:44 AM</span> / <span>00:00:28:790</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Linked List in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:40:44 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:13 AM</span>
+<span class='badge badge-default'>00:00:28:790</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=160</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="161"><span class="badge log pass-bg mr-2">Pass</span>Linked List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_on_get_started_button_of_linked_list()">
+                <span>When : The user clicks on Get Started button of Linked List</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_navigated_to_the_linked_list_page()">
+                <span>Then : The user should be navigated to  the Linked List page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="191"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Introduction</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_on_introduction_button()">
+                <span>When : The user clicks on Introduction button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Introduction" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="196"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Create a Linked List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_creating_a_linked_list_button()">
+                <span>When : The user clicks  Creating a Linked List button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Creating Linked List" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="207"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Types of Linked List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_clicks_the_types_of_linked_list_button()">
+                <span>When : User clicks the Types of Linked List button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Types of Linked List" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="238"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Implement Linked List in Python</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_clicks_implement_linked_list_in_python()">
+                <span>When : User clicks Implement Linked List in Python</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Implement Linked List in Python" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="242"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Traversal</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_clicks_on_traversal_button()">
+                <span>When : User clicks on Traversal button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Traversal" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="245"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Insertion</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_clciks_on_insertion_button()">
+                <span>When : User clciks on Insertion button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Insertion" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="250"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Deletion</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_clicks_on_deletion_button()">
+                <span>When : User clicks on Deletion button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_should_be_directed_to_of_linked_list_page(java.lang.String)">
+                <span>Then : The user should be directed to "Insertion" of Linked List Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.the_user_clicks_in_the_button(java.lang.String)">
+                <span>And : The user clicks in the "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.LinkedListsteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : User should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="277"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Functionality Testing</p>
+            <p class="text-sm">
+              <span>10:40:56 AM</span> / <span>00:00:38:090</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login Functionality Testing</h5>
+<span class='badge badge-success'>04.09.2024 10:40:56 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:34 AM</span>
+<span class='badge badge-default'>00:00:38:090</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=277</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="278"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="279"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering invalid values in "Techtesters" and "" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : The user must be displayed with the warning message or error message "Please fill in this field."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="286"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering invalid values in "" and "ipps@151" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : The user must be displayed with the warning message or error message "Please fill in this field."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="301"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering invalid values in "Invalid" and "Invalid" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : The user must be displayed with the warning message or error message "Invalid Username and Password"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="334"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering invalid values in "Techtesters" and "Invalid" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : The user must be displayed with the warning message or error message "Invalid Username and Password"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="337"><span class="badge log pass-bg mr-2">Pass</span>Negative Scenario testing with invalid data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering invalid values in "Invalid" and "ipps@151" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : The user must be displayed with the warning message or error message "Invalid Username and Password"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="455"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "Techtesters" and Password from "ipps@1" and Confirm Password "ipps@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "password_mismatch:The two password fields didn’t match." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="346"><span class="badge log pass-bg mr-2">Pass</span>Positive Scenario testing with valid inputs</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="347"><span class="badge log pass-bg mr-2">Pass</span>Positive Scenario testing with valid inputs</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : User must be in the Loginpage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : The user clicks on login button by entering valid values in "Techtesters" and "ipps@151" textboxes</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : User must be redirected to the DS-Algo Home page with username and successful login "You are logged in"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="342"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Queue in Homepage</p>
+            <p class="text-sm">
+              <span>10:41:02 AM</span> / <span>00:00:24:622</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Queue in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:41:02 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:26 AM</span>
+<span class='badge badge-default'>00:00:24:622</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=342</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="343"><span class="badge log pass-bg mr-2">Pass</span>Click on Getstarted</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_get_started_button_of_queue()">
+                <span>When : The user clicks on Get Started button of Queue</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_should_be_navigated_to_the_queue_page()">
+                <span>Then : The user should be navigated to the Queue page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="359"><span class="badge log pass-bg mr-2">Pass</span>Click on Implementation of Queue in Python</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_implementation_of_queue_in_python()">
+                <span>When : The user clicks on Implementation of Queue in Python</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_should_be_directed_to_the_of_queue_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation of Queue in Python" of Queue Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_a_button(java.lang.String)">
+                <span>And : The user clicks on a "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test1()">
+                <span>Then : user should be redirected to a page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="379"><span class="badge log pass-bg mr-2">Pass</span>click on Implementation using collections dequeue</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_implementation_using_collections_dequeue()">
+                <span>When : The user clicks on Implementation using collections dequeue</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_should_be_directed_to_the_of_queue_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation using collections dequeue" of Queue Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_a_button(java.lang.String)">
+                <span>And : The user clicks on a "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test1()">
+                <span>Then : user should be redirected to a page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="382"><span class="badge log pass-bg mr-2">Pass</span>click on Implementation using array</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_implementation_using_array()">
+                <span>When : The user clicks on Implementation using array</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_should_be_directed_to_the_of_queue_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation using array" of Queue Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_a_button(java.lang.String)">
+                <span>And : The user clicks on a "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test1()">
+                <span>Then : user should be redirected to a page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="390"><span class="badge log pass-bg mr-2">Pass</span>click on Queue Operations</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_queue_operations()">
+                <span>When : The user clicks on Queue Operations</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_should_be_directed_to_the_of_queue_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Queue Operations" of Queue Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.the_user_clicks_on_a_button(java.lang.String)">
+                <span>And : The user clicks on a "Try here" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Queuesteps.user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then :  user should be redirected to a page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="393"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Registration Page</p>
+            <p class="text-sm">
+              <span>10:41:07 AM</span> / <span>00:00:17:310</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Registration Page</h5>
+<span class='badge badge-success'>04.09.2024 10:41:07 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:24 AM</span>
+<span class='badge badge-default'>00:00:17:310</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=393</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="394"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="395"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "Techtesters" and Password from "" and Confirm Password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "Please fill in this field." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="400"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "Techtesters" and Password from "ipps@151" and Confirm Password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "Please fill in this field." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="413"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "" and Password from "" and Confirm Password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "Please fill in this field." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="452"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "Tech testers()" and Password from "ipps@15" and Confirm Password "ipps@151"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "password_mismatch:The two password fields didn’t match." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="459"><span class="badge log pass-bg mr-2">Pass</span>Entering null values in Username and Password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When : User  enters Username form "Techtesters" and Password from "1234" and Confirm Password "1234"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And : User clicks on Register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then : Compare with the expected message "password_mismatch:The two password fields didn’t match." that appears after clicking Register</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="475"><span class="badge log pass-bg mr-2">Pass</span>User enters correct username and correct password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Registrationsteps.the_user_is_on_the_new_user_registration_page()">
+                <span>Given : The user is on the new user registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Registrationsteps.users_enters_the_username_password_and_confirm_password_in_respective_fields_and_click_on_register()">
+                <span>When : Users enters the username password and confirm password in respective fields and click on register</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Registrationsteps.user_should_be_redirected_to_home_page_of_ds_algo()">
+                <span>Then :User should be redirected to Home Page of DS Algo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Registrationsteps.the_user_should_able_to_see_successful_message_on_the_ds_algo_home_page()">
+                <span>And : The user should able to see successful message on the DS Algo Home Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="471"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Stack in Homepage</p>
+            <p class="text-sm">
+              <span>10:41:14 AM</span> / <span>00:00:16:924</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Stack in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:41:14 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:31 AM</span>
+<span class='badge badge-default'>00:00:16:924</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=471</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="472"><span class="badge log pass-bg mr-2">Pass</span>Stack</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_clicks_on_get_started_button_of_stack()">
+                <span>When : The user clicks on Get Started button of Stack</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_should_be_navigated_to_the_stack_page()">
+                <span>Then : The user should be navigated to  the Stack page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="479"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Operations in Stack</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_clicks_on_opeartions_in_stack()">
+                <span>When : The user clicks on Opeartions in Stack</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_should_be_directed_to_the_of_stack_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Operations in Stack" of stack Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_clicks_button(java.lang.String)">
+                <span>And : User clicks "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="504"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Implementation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_clicks_on_implementation()">
+                <span>When : The user clicks on Implementation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_should_be_directed_to_the_of_stack_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation" of stack Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_clicks_button(java.lang.String)">
+                <span>And : User clicks "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="507"><span class="badge log pass-bg mr-2">Pass</span>User clicks on Applications</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_clicks_on_applications()">
+                <span>When : The user clicks on Applications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.the_user_should_be_directed_to_the_of_stack_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Applications" of stack Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_clicks_button(java.lang.String)">
+                <span>And : User clicks "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Stacksteps.user_should_be_redirected_to_the_page_having_an_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to the page having an tryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="525"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Tree in Homepage</p>
+            <p class="text-sm">
+              <span>10:41:19 AM</span> / <span>00:00:21:211</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Tree in Homepage</h5>
+<span class='badge badge-success'>04.09.2024 10:41:19 AM</span>
+<span class='badge badge-danger'>04.09.2024 10:41:40 AM</span>
+<span class='badge badge-default'>00:00:21:211</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=525</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="526"><span class="badge log pass-bg mr-2">Pass</span>Click on Get started</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_get_started_button_of_tree()">
+                <span>When : The user clicks on Get Started button of Tree</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_navigated_to_the_tree_page()">
+                <span>Then : The user should be navigated to the Tree page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="530"><span class="badge log pass-bg mr-2">Pass</span>Click on Overview of Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_overview_of_trees()">
+                <span>When : The user clicks on Overview of Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Overview of Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="534"><span class="badge log pass-bg mr-2">Pass</span>Click on Types of Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_types_of_trees()">
+                <span>When : The user clicks on Types of Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Types of Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="537"><span class="badge log pass-bg mr-2">Pass</span>Click on Terminologies</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_terminologies()">
+                <span>When : The user clicks on Terminologies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Terminologies" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="572"><span class="badge log pass-bg mr-2">Pass</span>Click on Tree Traversals</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_tree_traversals()">
+                <span>When :  The user clicks on Tree Traversals</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Tree Traversals" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="590"><span class="badge log pass-bg mr-2">Pass</span>Click on Traversal Illustration</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_traversal_illustration()">
+                <span>When :  The user clicks on Traversal Illustration</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Traversal Illustration" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="593"><span class="badge log pass-bg mr-2">Pass</span>Click on Binary Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_binary_trees()">
+                <span>When :  The user clicks on Binary Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Binary Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="609"><span class="badge log pass-bg mr-2">Pass</span>Click on Types of Binary Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_types_of_binary_trees()">
+                <span>When :  The user clicks on Types of Binary Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Types of Binary Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="612"><span class="badge log pass-bg mr-2">Pass</span>Click on Implementation in Python</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_implementation_in_python()">
+                <span>When :  The user clicks on Implementation in Python</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation in Python" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="637"><span class="badge log pass-bg mr-2">Pass</span>Click on Binary Tree traversals</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_binary_tree_traversals()">
+                <span>When :  The user clicks on Binary Tree traversals</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Binary Tree traversals" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="642"><span class="badge log pass-bg mr-2">Pass</span>Click on Implementation of Binary Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_implementation_of_binary_trees()">
+                <span>When :  The user clicks on Implementation of Binary Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation of Binary Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="659"><span class="badge log pass-bg mr-2">Pass</span>Click on Binary Search Trees</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_binary_search_trees()">
+                <span>When :  The user clicks on Binary Search Trees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Binary Search Trees" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="665"><span class="badge log pass-bg mr-2">Pass</span>Click on Implementation of BST</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_is_on_ds_algo_portal_homepage()">
+                <span>Given : The user is on DS Algo Portal homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_clicks_on_signin_button()">
+                <span>When : The user clicks on Signin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_enters_as_username_and_as_password_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>And : The user enters "Techtesters" as username and "ipps@151" as password and clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Arraysteps.the_user_should_get_message_as_in_homepage(java.lang.String)">
+                <span>Then :The user should get message as "You are logged in" in homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_on_implementation_of_bst()">
+                <span>When :  The user clicks on Implementation of BST</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_should_be_directed_to_the_of_tree_page(java.lang.String)">
+                <span>Then : The user should be directed to the "Implementation of BST" of Tree Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.the_user_clicks_the_button(java.lang.String)">
+                <span>And : The user clicks the "Try here" button.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgostepdefinitions.Treesteps.user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test()">
+                <span>Then : user should be redirected to a page having a TryEditor with a Run button to test</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
