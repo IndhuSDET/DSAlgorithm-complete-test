@@ -26,7 +26,7 @@ public class TestRunner2 extends AbstractTestNGCucumberTests
   {
 	  configreader.setBrowserType(browser);
   }
-  @Override	
+  @Override	 
   @DataProvider(parallel = true)
   public Object[][] scenarios()
   {
